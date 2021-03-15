@@ -35,7 +35,7 @@
 
 ## Как использовать (How to use)
 
-#### Объявление переменных
+##### 1. Объявление переменных
 
 		UTFT    GLCD(ITDB32S, 38,39,40,41);   // Remember to change the model parameter to suit your display module!
 		UTouch  Touch(6,5,4,3,2);
@@ -45,7 +45,7 @@
 		TLabel LStatus(&StatusPanel, 0, 0, 205, 40);
 		TButton BtnStart(&StatusPanel, 210, 0, 110, 40);
 
-#### Инициализация переменных
+##### 2. Инициализация переменных
 
 		//объект библиотеки UTFT
 		GLCD.InitLCD();
@@ -70,7 +70,7 @@
 		BtnStart.onClick = BtnStartClick;
 		BtnStart.show();
 	
-#### Обработка касания
+##### 3. Обработка касания
 		void loop() {
 			TPoint TouchPoint;
 			static TControl * FocusControl = NULL;
