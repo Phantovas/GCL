@@ -9,16 +9,22 @@
 GCL    KEYWORD1
 TDisplay	KEYWORD1
 TPanel  KEYWORD1
-TButton REYWORD1
+TLabel	KEYWORD1
+TIndicator	KEYWORD1
+TTrackBar	KEYWORD1
+TButton	KEYWORD1
+TSlider	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
+
 Rect	KEYWORD2
 ClientRect	KEYWORD2
 Border	KEYWORD2
 init	KEYWORD2
 setBorder	KEYWORD2
+
 #######################################
 # Constants (LITERAL1)
 #######################################

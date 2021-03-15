@@ -1,4 +1,4 @@
-# GLC
+# GCL (Graphic component library)
 
 Библиотека визуальных компонент для Arduino UTFT и URTouch.
 Версия v0.1a
