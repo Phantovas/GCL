@@ -7,52 +7,55 @@
 #ifndef GCL_h
 #define GCL_h
 
-#define PAINT_DELAY 0        //задержка при прорисовке в цикле например
+//************************************************
+//Constants
+//************************************************
+#define PAINT_DELAY 0        //задержка при прорисовке
 #define ACTIVATE_DELAY 100   //задержка на активацию
   
-//*********************************
+//************************************************
 // COLORS
-//*********************************
-// VGA color palette
-#define CL_BLACK        VGA_BLACK		
-#define CL_WHITE		    VGA_WHITE		
-#define CL_RED			    VGA_RED			
-#define CL_GREEN		    VGA_GREEN		
-#define CL_BLUE         VGA_BLUE		
-#define CL_SILVER		    VGA_SILVER	
-#define CL_GRAY   	    VGA_GRAY		
-#define CL_MAROON		    VGA_MAROON	
-#define CL_YELLOW		    VGA_YELLOW	
-#define CL_OLIVE		    VGA_OLIVE		
-#define CL_LIME         VGA_LIME		
-#define CL_AQUA         VGA_AQUA		
-#define CL_TEAL         VGA_TEAL		
-#define CL_NAVY         VGA_NAVY		
-#define CL_FUCHSIA	    VGA_FUCHSIA	
-#define CL_PURPLE       VGA_PURPLE	
-#define CL_TRANSPARENT  VGA_TRANSPARENT
-//*************************************
-#define CL_NONE CL_BLACK
-#define CL_BTNCOLOR CL_BLUE
-#define CL_BORDERCOLOR CL_GREEN//CL_NAVY
-#define CL_ACTIVEBORDERCOLOR CL_YELLOW
-#define CL_FONTCOLOR CL_WHITE
-#define CL_DISABLEFONTCOLOR CL_BLACK
-#define CL_PROGRESSCOLOR CL_BLUE
-//*********************************
+//************************************************
+#define CL_BLACK              VGA_BLACK		
+#define CL_WHITE              VGA_WHITE		
+#define CL_RED                VGA_RED			
+#define CL_GREEN              VGA_GREEN		
+#define CL_BLUE               VGA_BLUE		
+#define CL_SILVER             VGA_SILVER	
+#define CL_GRAY               VGA_GRAY		
+#define CL_MAROON             VGA_MAROON	
+#define CL_YELLOW             VGA_YELLOW	
+#define CL_OLIVE              VGA_OLIVE		
+#define CL_LIME               VGA_LIME		
+#define CL_AQUA               VGA_AQUA		
+#define CL_TEAL               VGA_TEAL		
+#define CL_NAVY               VGA_NAVY		
+#define CL_FUCHSIA            VGA_FUCHSIA	
+#define CL_PURPLE             VGA_PURPLE	
+#define CL_TRANSPARENT        VGA_TRANSPARENT
+//************************************************
+#define CL_NONE                 CL_BLACK
+#define CL_BTNCOLOR             CL_BLUE
+#define CL_BORDERCOLOR          CL_GREEN//CL_NAVY
+#define CL_ACTIVEBORDERCOLOR    CL_YELLOW
+#define CL_FONTCOLOR            CL_WHITE
+#define CL_DISABLEFONTCOLOR     CL_BLACK
+#define CL_PROGRESSCOLOR        CL_BLUE
+
+//************************************************
 // PLACEMENT
-//*********************************
-#define DT_LEFT 0x00
-#define DT_CENTER 0x01
-#define DT_RIGHT 0x10
-
-
+//************************************************
+#define DT_LEFT                 0x00
+#define DT_CENTER               0x01
+#define DT_RIGHT                0x10
 
 #include "Arduino.h"
 
 #include <UTFT.h>
 
+//************************************************
 // Declare which fonts we will be using
+//************************************************
 extern uint8_t SmallFont[];
 extern uint8_t BigFont[];
 //extern uint8_t Inconsola[];
@@ -63,15 +66,20 @@ extern uint8_t DotMatrix_M_rus[];
 extern uint16_t icon_check[];
 extern uint16_t icon_uncheck[];
 
-//forward reference
+//************************************************
+//Forward reference
+//************************************************
 class TObject;
 class TComponent;
 class TControl;
 
-//structurs
+//************************************************
+//Structurs
+//************************************************
 typedef struct TPoint {
   unsigned int X, Y;
 };
+
 typedef struct TRect {
   unsigned int Left, Top, Right, Bottom;
 };
