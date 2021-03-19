@@ -105,7 +105,7 @@ public:
 /**
  * Класс работы с подчиненными компонентами
  */
-class TComponent:protected TObject {
+class TComponent: protected TObject {
 private:
   listItem *_Components, *_lastItem;
   uint8_t _ComponentCount;
@@ -139,7 +139,7 @@ public:
 /**
  * Класс визуальных компонентов
  */
-class TControl:public TComponent {
+class TControl: public TComponent {
 private:
   TPoint _ClientOrigin;                                        //координата абсолютная от левого угла экрана (0,0)
   uint8_t *_font;
